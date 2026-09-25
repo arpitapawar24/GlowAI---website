@@ -93,3 +93,98 @@ Both servers are currently live and ready for testing:
 * **GitHub** — Used to host the project repository and manage source code remotely.
 * **VS Code** — Used as the primary code editor and development environment.
 
+## 🏗️ Project Architecture
+
+```text
+d:/antigravity/
+│
+├── client/                              # React 19 + Tailwind CSS + Lucide Icons + Vite
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── components/                  # Reusable UI components
+│   │   │   ├── Navbar
+│   │   │   ├── Footer
+│   │   │   ├── ThemeToggle
+│   │   │   ├── ProductCard
+│   │   │   ├── CartDrawer
+│   │   │   └── ...
+│   │   │
+│   │   ├── context/                     # Global application state
+│   │   │   ├── AuthContext
+│   │   │   ├── CartContext
+│   │   │   └── ThemeContext
+│   │   │
+│   │   ├── pages/                       # Application pages
+│   │   │   ├── Home
+│   │   │   ├── AIAnalyzer
+│   │   │   ├── Marketplace
+│   │   │   ├── ProductDetails
+│   │   │   ├── Doctors
+│   │   │   ├── Profile
+│   │   │   └── Checkout
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js                   # API client for backend communication
+│   │   │
+│   │   ├── App.jsx                      # Main application router & layout
+│   │   └── index.css                    # Tailwind + custom theme & animations
+│   │
+│   │
+│   └── ...
+│
+├── server/                              # Node.js + Express.js + Mongoose
+│   │
+│   ├── config/
+│   │   └── db.js                        # MongoDB connection configuration
+│   │
+│   ├── controllers/                     # Business logic
+│   │   ├── auth
+│   │   ├── product
+│   │   ├── analysis
+│   │   ├── doctor
+│   │   ├── appointment
+│   │   └── order
+│   │
+│   ├── models/                          # MongoDB data models
+│   │   ├── User
+│   │   ├── Product
+│   │   ├── Doctor
+│   │   ├── Appointment
+│   │   ├── Analysis
+│   │   ├── Order
+│   │   └── Review
+│   │
+│   ├── routes/                          # REST API routes
+│   │
+│   ├── middleware/                      # Request processing & security
+│   │   ├── JWT authentication
+│   │   └── Multer file uploads
+│   │
+│   ├── data/
+│   │   └── seedData.js                  # Initial products & doctor data
+│   │
+│   └── server.js                        # Express server entry point
+│
+├── README.md                            # Project documentation
+│
+└── package.json                         # Project configuration & scripts
+
+---
+
+## 📁 Architecture Responsibilities
+
+| Folder         | Responsibility                                     |
+| -------------- | -------------------------------------------------- |
+| `components/`  | Contains reusable UI components                    |
+| `context/`     | Manages global/shared React state                  |
+| `pages/`       | Contains major application screens                 |
+| `services/`    | Handles API communication                          |
+| `controllers/` | Contains backend business logic                    |
+| `models/`      | Defines MongoDB data structures                    |
+| `routes/`      | Defines backend API endpoints                      |
+| `middleware/`  | Handles authentication and request processing      |
+| `config/`      | Contains configuration such as database connection |
+| `data/`        | Contains initial/seed data                         |
+
+
