@@ -49,3 +49,47 @@ Both servers are currently live and ready for testing:
 
    * Seamless light/dark mode switch persisted across browser sessions.
    * Fully responsive on mobile, tablet, and desktop screens.
+
+
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+
+* **React.js** — Used to build the interactive and component-based user interface.
+* **Vite** — Used as the frontend build tool and development server for fast development.
+* **JavaScript (ES6+)** — Used for application logic, interactions, API communication, and dynamic functionality.
+* **HTML5** — Used to structure the web pages and application content.
+* **CSS3** — Used for styling, responsive layouts, animations, light/dark themes, and the overall visual design.
+
+### 🧩 Frontend Architecture
+
+* **React Components** — Used to divide the application into reusable UI components such as Navbar, ProductCard, CartDrawer, ConsultationModal, and ThemeToggle.
+* **React Context API** — Used for managing shared application state such as authentication, cart data, and theme preferences.
+* **React Router** — Used for navigation between different pages of the application.
+
+### ⚙️ Backend
+
+* **Node.js** — Provides the JavaScript runtime environment for running the backend outside the browser.
+* **Express.js** — Used to build the backend server and REST APIs.
+* **REST API** — Used for communication between the React frontend and backend services.
+
+### 🗄️ Database
+
+* **MongoDB** — Used as the database for storing application data such as users, products, orders, appointments, reviews, and analysis-related information.
+
+### 🤖 AI / Analysis
+
+* **AI-powered Skin & Hair Analysis** — Used to provide personalized skin and hair analysis experiences and generate recommendations.
+* **Image Processing** — Used as part of the skin and hair analysis workflow to process uploaded or captured images.
+
+### 🔐 Authentication & Security
+
+* **Authentication System** — Used to manage user accounts and protected user functionality.
+* **Environment Variables (`.env`)** — Used to securely store configuration values such as API URLs, database credentials, and secret keys.
+
+### 🔗 Development & Version Control
+
+* **Git** — Used for tracking changes and maintaining different versions of the source code.
+* **GitHub** — Used to host the project repository and manage source code remotely.
+* **VS Code** — Used as the primary code editor and development environment.
+
